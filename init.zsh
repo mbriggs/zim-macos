@@ -14,7 +14,7 @@ do
   path=/opt/homebrew/opt/$package/libexec/gnubin
   if [ ! -f "$path" ]
   then
-    brew install $package
+    /opt/homebrew/bin/brew install $package
   fi
   export PATH=$path:$PATH
 done
@@ -25,6 +25,6 @@ for package in "${tools[@]}"
 do
   if [ ! -f "/opt/homebrew/$package" ]
   then
-    brew install $package
+    /opt/homebrew/bin/brew install $package
   fi
 done
